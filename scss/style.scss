@@ -64,26 +64,21 @@ a{
     flex-direction: row;
     justify-content: center;
 }
-.direction-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 //header
-    .main-header{
-        height: 63px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        .main-header-img{
-            width: 197px;
-            height: 36px;
-            padding: 0px 19px 0px 16px;
-        }
+.main-header{
+    height: 63px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    .main-header__img{
+        width: 197px;
+        height: 36px;
+        padding: 0px 19px 0px 16px;
     }
-.main-wrapper{
+}
+.main-section{
     .section-location{
         background: #EAEAEA;
         color: $footer-bg-color;
@@ -93,127 +88,118 @@ a{
         justify-content: center;
         gap: 17px;
     }
-}
-
-.section-info{
-    background: $bg-grey-color;
-    align-items: center;
-    text-align: center;
-    padding: 39px 20px 57px 20px;
-    display: flex;
-    flex-direction: column;
-    .section-info-text{
-        font-size: 18px;
-        margin-bottom: 27px;
-    }
-}
-.main-container{
-    .section-fonctionnement{
+    .section-info{
+        background: $bg-grey-color;
+        align-items: center;
+        text-align: center;
+        padding: 39px 20px 57px 20px;
         display: flex;
         flex-direction: column;
-        padding: 0 20px 66px 20px;
-        .section-fonctionnement-title{
-            margin: 48px 80px 26px 0px;
+        &__p{
+            font-size: 18px;
+            margin-bottom: 27px;
         }
-        .section-fontionnement-items{
-            gap: 24.94px;
-            counter-reset: compteListe;
+    }
+    .main-container{
+        .section-fonctionnement{
             display: flex;
             flex-direction: column;
-            .section-fonctionnement-button{
-                background: $bg-grey-color;
-                border-radius: 20px;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-                align-items: center;
-                height: 72.379px;
-                gap: 27px;
-                position: relative;
-                &::before{
-                    counter-increment: compteListe 1;
-                    content: counter(compteListe) " ";
-                    position: absolute;
-                    color: $bg-white-color;
-                    background-color: $primary-color;
-                    border-radius: 25px;
-                    display: flex;
-                    margin-right: 100%;
-                    width: 24px;
-                    height: 24px;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 14.182px;
-                }
-                p{
-                    color: #000;
-                    font-size: 16px;
-                }
+            padding: 0 20px 66px 20px;
+            &__title{
+                margin: 48px 80px 26px 0px;
             }
-        }
-    }
-    .section-restaurant{
-        background: $bg-grey-color;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        h2{
-            margin: 54px 80px 0px 20px;
-        }
-        .section-restaurant-card{
-            margin: 0 20px;
-            position: relative;
-            .section-restaurant-card-badge{
-                color: $green-color;
-                background-color: $tertiary-color;
-                position: absolute;
-                width: 80px;
-                height: 29px;
-                right: 12px;
-                top:13px;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 2px;
-            }
-            .card-img{
-                width: 100%;
-                height: 231px;
-                object-fit: cover;
-                border-radius:  15px 15px 0 0;
-            }
-            .card-info{
-                background-color: $bg-white-color;
-                border-radius: 0 0 15px 15px ;
-                padding: 16px 25px 12px 13px;
-                margin-top: -5px;
-                gap: 5px;
+            &__items{
+                gap: 24.94px;
+                counter-reset: compteListe;
                 display: flex;
                 flex-direction: column;
-                position: relative;
-                .card-title{
-                    margin: 0;
-                }
-                .card-like{
-                    width: 22px;
-                    height: 21px;
-                    position: absolute;
-                    right: 25px;
-                    top: 23px;
-                    .like-icone-empty {
+                &__button{
+                    background: $bg-grey-color;
+                    border-radius: 20px;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                    align-items: center;
+                    height: 72.379px;
+                    gap: 27px;
+                    position: relative;
+                    &::before{
+                        counter-increment: compteListe 1;
+                        content: counter(compteListe) " ";
                         position: absolute;
-                        background-color: $bg-white-color;
-                        transition: opacity 1000ms ease-in-out;
-                        &:hover {
-                          opacity: 0;
-                          cursor: pointer;
-                        }
+                        color: $bg-white-color;
+                        background-color: $primary-color;
+                        border-radius: 25px;
+                        display: flex;
+                        margin-right: 100%;
+                        width: 24px;
+                        height: 24px;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14.182px;
                     }
-                    .like-icone-full {
-                        color: rgba(0,0,0,0);
-                        background: $button-gradian;
-                        -webkit-background-clip: text;
-                        background-clip:text;
-                    } 
+                    &-text{
+                        color: #000;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .section-restaurant{
+            background: $bg-grey-color;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding-bottom: 66px;
+            &__title{
+                margin: 54px 80px 0px 20px;
+            }
+            &__card{
+                margin: 0 20px;
+                position: relative;
+                &__badge{
+                    color: $green-color;
+                    background-color: $tertiary-color;
+                    position: absolute;
+                    width: 80px;
+                    height: 29px;
+                    right: 12px;
+                    top:13px;
+                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 2px;
+                }
+                &__img{
+                    width: 100%;
+                    height: 231px;
+                    object-fit: cover;
+                    border-radius:  15px 15px 0 0;
+                }
+                &__info{
+                    background-color: $bg-white-color;
+                    border-radius: 0 0 15px 15px ;
+                    padding: 16px 25px 12px 13px;
+                    margin-top: -5px;
+                    gap: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    &__title{
+                        margin: 0;
+                    }
+                    &__like{
+                        width: 22px;
+                        height: 21px;
+                        position: absolute;
+                        right: 25px;
+                        top: 23px;
+                        background-image: url(../assets/svg/like-default.svg);
+                        transition:1s ease-in-out;
+                        -webkit-transition: 1s ease-in-out;
+                        &:hover{
+                            background-image: url(../assets/svg/like-full.svg);
+                        }   
+                    }
                 }
             }
         }
@@ -227,18 +213,18 @@ a{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        .footer-logo{
+        &__logo{
             width: 139px;
             height: 27px;
         }
-        .footer-list{
+        &__list{
             list-style: none;
             padding: 0;
             margin: 0;
             gap: 7px;
             display: flex;
             flex-direction: column;
-            .footer-list-items{
+            &--items{
                 display: flex;
                 flex-direction: row;
                 gap: 11px;
