@@ -16,6 +16,23 @@ $black-color:#000;
 $shadow-box: drop-shadow(0px 4px 10px 0px rgba(0, 0, 0, 0.25));
 $button-gradian: linear-gradient(#9356DC , #FF79DA );
 
+@mixin button-shadow {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@mixin column-direction{
+    display: flex;
+    flex-direction: column;
+}
+@mixin row-direction{
+    display: flex;
+    flex-direction: row;
+}
+@mixin center-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 *{
     font-family: 'Roboto'; 
 }
@@ -39,6 +56,7 @@ a{
     color: $black-color;
 }
 .btn{   
+    @include center-element;
     border-radius: 25px;
     width: 218px;
     height: 50px;
@@ -48,9 +66,6 @@ a{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    align-items: center;
-    display: flex;
-    justify-content: center;
     transition: transform 400ms;
     box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
     background: $button-gradian;
@@ -59,19 +74,12 @@ a{
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
 }
-.direction-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 //header
 .main-header{
+    @include center-element;
+    @include button-shadow;
     height: 63px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     .main-header__img{
         width: 197px;
         height: 36px;
@@ -80,12 +88,10 @@ a{
 }
 .main-section{
     .section-location{
+        @include center-element;
         background: #EAEAEA;
         color: $footer-bg-color;
         height: 50px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
         gap: 17px;
     }
     .section-info{
@@ -93,8 +99,7 @@ a{
         align-items: center;
         text-align: center;
         padding: 39px 20px 57px 20px;
-        display: flex;
-        flex-direction: column;
+        @include column-direction;
         &__p{
             font-size: 18px;
             margin-bottom: 27px;
@@ -102,38 +107,46 @@ a{
     }
     .main-container{
         .section-fonctionnement{
-            display: flex;
-            flex-direction: column;
-            padding: 0 20px 66px 20px;
+            @include column-direction;
+            padding: 0px 20px 66px 20px;
+            @media (min-width:1024px) {
+                padding: 50px 180px 50px 180px;
+            }
             &__title{
                 margin: 48px 80px 26px 0px;
             }
             &__items{
                 gap: 24.94px;
                 counter-reset: compteListe;
-                display: flex;
-                flex-direction: column;
+                @include column-direction;
+                @media (min-width:1024px) {
+                    @include row-direction;
+                    gap: 36.51px;
+                    justify-content: space-between;
+                }
                 &__button{
+                    @include row-direction;
+                    @include center-element;
                     background: $bg-grey-color;
                     border-radius: 20px;
                     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-                    align-items: center;
                     height: 72.379px;
                     gap: 27px;
                     position: relative;
+                    @media (min-width:1024px) {
+                        width: 100%;   
+                    }
                     &::before{
+                        @include center-element;
                         counter-increment: compteListe 1;
                         content: counter(compteListe) " ";
                         position: absolute;
                         color: $bg-white-color;
                         background-color: $primary-color;
                         border-radius: 25px;
-                        display: flex;
                         margin-right: 100%;
                         width: 24px;
                         height: 24px;
-                        justify-content: center;
-                        align-items: center;
                         font-size: 14.182px;
                     }
                     &-text{
@@ -144,89 +157,91 @@ a{
             }
         }
         .section-restaurant{
+            @include column-direction;
             background: $bg-grey-color;
-            display: flex;
-            flex-direction: column;
             gap: 18px;
             padding-bottom: 66px;
+            @media (min-width:1024px) {
+                padding: 50px 180px 50px 180px;
+            }
             &__title{
                 margin: 54px 80px 0px 20px;
             }
-            &__card{
-                margin: 0 20px;
-                position: relative;
-                &__badge{
-                    color: $green-color;
-                    background-color: $tertiary-color;
-                    position: absolute;
-                    width: 80px;
-                    height: 29px;
-                    right: 12px;
-                    top:13px;
-                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 2px;
+            &__menu{
+                @media (min-width: 768px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
                 }
-                &__img{
-                    width: 100%;
-                    height: 231px;
-                    object-fit: cover;
-                    border-radius:  15px 15px 0 0;
-                }
-                &__info{
-                    background-color: $bg-white-color;
-                    border-radius: 0 0 15px 15px ;
-                    padding: 16px 25px 12px 13px;
-                    margin-top: -5px;
-                    gap: 5px;
-                    display: flex;
-                    flex-direction: column;
+                &__card{
+                    margin: 0 20px;
                     position: relative;
-                    &__title{
-                        margin: 0;
-                    }
-                    &__like{
-                        width: 22px;
-                        height: 21px;
+                    &__badge{
+                        @include center-element;
+                        @include button-shadow;
+                        color: $green-color;
+                        background-color: $tertiary-color;
                         position: absolute;
-                        right: 25px;
-                        top: 23px;
-                        background-image: url(../assets/svg/like-default.svg);
-                        transition:1s ease-in-out;
-                        -webkit-transition: 1s ease-in-out;
-                        &:hover{
-                            background-image: url(../assets/svg/like-full.svg);
-                        }   
+                        width: 80px;
+                        height: 29px;
+                        right: 12px;
+                        top:13px;
+                        border-radius: 2px;
+                    }
+                    &__img{
+                        width: 100%;
+                        height: 231px;
+                        object-fit: cover;
+                        border-radius:  15px 15px 0 0;
+                    }
+                    &__info{
+                        @include column-direction;
+                        background-color: $bg-white-color;
+                        border-radius: 0 0 15px 15px ;
+                        padding: 16px 25px 12px 13px;
+                        margin-top: -5px;
+                        gap: 5px;
+                        position: relative;
+                        &__title{
+                            margin: 0;
+                        }
+                        &__like{
+                            width: 22px;
+                            height: 21px;
+                            position: absolute;
+                            right: 25px;
+                            top: 23px;
+                            background-image: url(../assets/svg/like-default.svg);
+                            transition:1s ease-in-out;
+                            -webkit-transition: 1s ease-in-out;
+                            &:hover{
+                                background-image: url(../assets/svg/like-full.svg);
+                            }   
+                        }
                     }
                 }
             }
+            
         }
     }
 }
-
 .footer{
     padding: 22px 25px;
     background-color: $footer-bg-color;
     .section-footer{
-        display: flex;
-        flex-direction: column;
+        @include column-direction;
         gap: 16px;
         &__logo{
             width: 139px;
             height: 27px;
         }
         &__list{
+            @include column-direction;
             list-style: none;
             padding: 0;
             margin: 0;
             gap: 7px;
-            display: flex;
-            flex-direction: column;
-            &--items{
-                display: flex;
-                flex-direction: row;
+            &-items{
+                @include row-direction;
                 gap: 11px;
                 a{
                     color:$bg-white-color;
