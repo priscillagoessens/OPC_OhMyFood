@@ -1,3 +1,4 @@
+@import "./breakpoint";
 @font-face {
 	font-family: 'Roboto';
 	src:url('../assets/fonts/Roboto-Regular.ttf')
@@ -14,7 +15,7 @@ $bg-grey-color: #F6F6F6;
 $bg-white-color: #FFFFFF;
 $black-color:#000;
 $shadow-box: drop-shadow(0px 4px 10px 0px rgba(0, 0, 0, 0.25));
-$button-gradian: linear-gradient(#9356DC , #FF79DA );
+$button-gradian: linear-gradient($secondary-color,$primary-color);
 
 @mixin button-shadow {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -109,7 +110,7 @@ a{
         .section-fonctionnement{
             @include column-direction;
             padding: 0px 20px 66px 20px;
-            @media (min-width:1024px) {
+            @include media(desktop, tablet){
                 padding: 50px 180px 50px 180px;
             }
             &__title{
@@ -118,8 +119,10 @@ a{
             &__items{
                 gap: 24.94px;
                 counter-reset: compteListe;
+                padding-left: 10px;
+                align-items: center;
                 @include column-direction;
-                @media (min-width:1024px) {
+                @include media(desktop, tablet) {
                     @include row-direction;
                     gap: 36.51px;
                     justify-content: space-between;
@@ -133,7 +136,9 @@ a{
                     height: 72.379px;
                     gap: 27px;
                     position: relative;
-                    @media (min-width:1024px) {
+                    width: 100%;
+                    max-width: 322px;
+                    @include media(desktop, tablet){
                         width: 100%;   
                     }
                     &::before{
@@ -144,10 +149,14 @@ a{
                         color: $bg-white-color;
                         background-color: $primary-color;
                         border-radius: 25px;
-                        margin-right: 100%;
                         width: 24px;
                         height: 24px;
                         font-size: 14.182px;
+                        margin: auto;
+                        left: -10px;
+                    }
+                    img{
+                        width: 18px;
                     }
                     &-text{
                         color: #000;
@@ -161,20 +170,28 @@ a{
             background: $bg-grey-color;
             gap: 18px;
             padding-bottom: 66px;
-            @media (min-width:1024px) {
+            @include media(desktop, tablet){
                 padding: 50px 180px 50px 180px;
             }
             &__title{
                 margin: 54px 80px 0px 20px;
             }
             &__menu{
-                @media (min-width: 768px) {
+                gap: 18px;
+                display: flex;
+                flex-direction: column;
+                @include media(desktop, tablet){
                     display: grid;
                     grid-template-columns: 1fr 1fr;
+                    column-gap: 100px;
+                    row-gap: 50px;
                 }
                 &__card{
                     margin: 0 20px;
                     position: relative;
+                    @include media(desktop, tablet){
+                        margin: unset;
+                    }
                     &__badge{
                         @include center-element;
                         @include button-shadow;
@@ -203,6 +220,13 @@ a{
                         position: relative;
                         &__title{
                             margin: 0;
+                            font-size: 18px;
+                            
+                        }
+                        &__text{
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 300;
                         }
                         &__like{
                             width: 22px;
@@ -227,9 +251,17 @@ a{
 .footer{
     padding: 22px 25px;
     background-color: $footer-bg-color;
+    @include media(desktop,tablet){
+        padding: 30px 25px;
+    }
     .section-footer{
         @include column-direction;
         gap: 16px;
+        @include media(desktop, tablet){
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 54px;
+        }
         &__logo{
             width: 139px;
             height: 27px;
@@ -240,9 +272,16 @@ a{
             padding: 0;
             margin: 0;
             gap: 7px;
+            @include media(desktop, tablet){
+                flex-direction: row;
+                }
             &-items{
                 @include row-direction;
                 gap: 11px;
+                @include media(desktop, tablet){
+                    display: inline;
+                    margin: 0 5px;
+                }
                 a{
                     color:$bg-white-color;
                 }
