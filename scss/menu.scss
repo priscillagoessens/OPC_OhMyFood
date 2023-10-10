@@ -1,0 +1,112 @@
+@import "./variables";
+
+h2, h3{
+    margin: 0;
+}
+
+.main-header{
+    &__arrow{
+        margin-left: 1rem;;
+    }
+}
+.section-info{
+    &__container-img{
+        @include column-direction;
+        &__background{
+            object-fit: cover;
+            height: 17.1875rem;
+        }
+    }
+}
+.container-menu{
+    background-color: $bg-grey-color;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    position: relative;
+    width: 100%;
+    margin-top: -3rem;
+    @include media (desktop) {
+        width: 1055px;
+        margin: -3rem auto;
+    }
+    &__section{
+        @include column-direction;
+        gap: 40px;
+        padding-bottom: 40px;
+        @include media(tablet,desktop){
+            align-items: center;
+            padding-bottom: 100px;
+        }
+        &__title{
+            @include row-direction;
+            align-items: center;
+            padding: 32px 17px 0 17px;
+            width: 341px;
+            position: relative;
+            h2{
+                margin:0;
+                font-family: 'Shrikhand';
+            }
+        }
+        &__menu{
+            @include column-direction;
+            gap: 12px;
+            margin: 0 13px;
+            @include media(tablet,desktop){
+                width: 63%;
+            }
+            &--title{
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-transform: uppercase;
+                position: relative;
+                height:27px;
+                &::after{
+                    border-top: 3px solid $tertiary-color;
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    right: 0; 
+                    bottom: 0px;
+                    width:40px;    
+                }
+            }
+            &__card{
+                @include column-direction;
+                padding: 15px;
+                background-color: $bg-white-color;
+                border-radius: 15px;
+                &:hover{
+                    background-color: #99e2d0;
+                }
+                &--plate-title{
+                    overflow: hidden;
+                    color: #000;
+                    text-overflow: ellipsis;
+                    font-family: Roboto;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: normal;
+                }
+                &--plate-description{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 15.043px;
+                    @include row-direction;
+                }
+                &--plate-price{
+                    margin-left: auto;
+                    color: $footer-bg-color;
+                    font-weight: 700;
+                }
+            }
+        }
+        .btn{
+            align-self: center;
+        }
+    }
+}
+

@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Oh My Food</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="https://kit.fontawesome.com/df4c2f8b00.js" crossorigin="anonymous"></script>
+  </head>
 <body>
- <header>
-  <div class="main-header">
-    <!-- <i class="main-header-icone fa-solid fa-arrow-left"></i> -->
-    <img class='main-header__img' src="assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
+ <header class="main-header">
+  <div class="main-header__img-container">
+    <img class='main-header__img-container__img' src="assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
   </div> 
  </header>
  <main class="main-section">
@@ -45,63 +43,58 @@
     <section class="section-restaurant" id="restaurants">
       <h2  class="section-restaurant__title" >Restaurants</h2>
       <div class="section-restaurant__menu">
-        <a href="#">
+        <a href="/menus_restaurants/La_palette_du_gout.html">
           <article class="section-restaurant__menu__card">
             <span class="section-restaurant__menu__card__badge">Nouveau</span>
             <img class="section-restaurant__menu__card__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo restaurant La palette du goût">
             <div class="section-restaurant__menu__card__info">
               <h3 class="section-restaurant__menu__card__info__title">La palette du goût</h3>
-              <p class="section-restaurant__menu__card__info__text">Ménilmontant</p>
-              <span class="section-restaurant__menu__card__info__like"></span>
+              <p class="section-restaurant__menu__card__info__text">Ménilmontant<span class="like"></span></p>
             </div>
           </article>
         </a>
-        <a href="#">
+        <a href="/menus_restaurants/La_note_enchantee.html">
           <article class="section-restaurant__menu__card">
             <span class="section-restaurant__menu__card__badge">Nouveau</span>
             <img class="section-restaurant__menu__card__img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo restaurant La note enchantée">
             <div class="section-restaurant__menu__card__info">
               <h3 class="section-restaurant__menu__card__info__title">La note enchantée</h3>
-              <p  class="section-restaurant__menu__card__info__text">Charonne</p>
-              <span class="section-restaurant__menu__card__info__like"></span>
+              <p  class="section-restaurant__menu__card__info__text">Charonne<span class="like"></span></p>
             </div>
           </article>
         </a>
-        <a href="#">
+        <a href="/menus_restaurants/A_la_francaise.html">
           <article class="section-restaurant__menu__card">
             <img class="section-restaurant__menu__card__img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo restaurant À la française">
             <div class="section-restaurant__menu__card__info">
               <h3 class="section-restaurant__menu__card__info__title">À la française</h3>
-              <p  class="section-restaurant__menu__card__info__text">Cité Rouge</p>
-              <span class="section-restaurant__menu__card__info__like"></span>
+              <p  class="section-restaurant__menu__card__info__text">Cité Rouge<span class="like"></span></p>
             </div>
           </article>
         </a>
-        <a href="#">
+        <a href="/menus_restaurants/Le_delice_des_sens.html">
           <article class="section-restaurant__menu__card">
             <img class="section-restaurant__menu__card__img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo restaurant Le délice des sens">
             <div class="section-restaurant__menu__card__info">
               <h3 class="section-restaurant__menu__card__info__title">Le délice des sens</h3>
-              <p  class="section-restaurant__menu__card__info__text">Folie-Méricourt</p>
-              <span class="section-restaurant__menu__card__info__like"></span>
+              <p  class="section-restaurant__menu__card__info__text">Folie-Méricourt<span class="like"></span></p>
             </div>
           </article>
         </a>
       </div>
-      
     </section>
   </div>
  </main>
  <footer class="footer">
   <section class="section-footer">
-    <img class="section-footer__logo" src="assets/images/logo/ohmyfood-white.svg" alt="Logo Oh My Food">
+    <img class="section-footer__logo" alt="Logo Oh My Food">
     <ul class="section-footer__list">
       <li class="section-footer__list-items"><img src ="assets/svg/fork.svg" alt="Proposer un restaurant"/>
       <a href="#">Proposer un restaurant</a></li>
       <li class="section-footer__list-items"><img src ="assets/svg/hands.svg" alt="Devenir partenaire"/>
       <a href="#">Devenir partenaire</a> </li>
       <li class="section-footer__list-items"><a href="#">Mentions légales</a></li>
-      <li class="section-footer__list-items"><a href="#">Contact</a></li>
+      <li class="section-footer__list-items"><a href="mailto:someone@mail.com" onclick="window.location=another.html">Contact</a></li>
     </ul>
   </section>
  </footer>   
