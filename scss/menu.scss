@@ -74,33 +74,53 @@ h2, h3{
                 }
             }
             &__card{
-                @include column-direction;
                 padding: 15px;
                 background-color: $bg-white-color;
                 border-radius: 15px;
+                overflow: hidden;
+                display: flex;
                 &:hover{
-                    background-color: #99e2d0;
-                }
-                &--plate-title{
-                    overflow: hidden;
-                    color: #000;
-                    text-overflow: ellipsis;
-                    font-family: Roboto;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: bold;
-                    line-height: normal;
-                }
-                &--plate-description{
+                    .check{
+                        margin-right: -1rem;  
+                    }  
+                } 
+                &--plate{
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    font-size: 15.043px;
-                    @include row-direction;
+                    &-title{
+                        overflow: hidden;
+                        color: #000;
+                        text-overflow: ellipsis;
+                        font-family: Roboto;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: normal;
+                        white-space: nowrap;
+                    }
+                    &-description{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 15.043px;
+                        white-space: nowrap;
+                    }  
                 }
                 &--plate-price{
                     margin-left: auto;
                     color: $footer-bg-color;
                     font-weight: 700;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                .check{
+                    background-color: #99e2d0;
+                    margin: -1rem -5rem -1rem 1rem;
+                    width: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition-duration: .5s;
                 }
             }
         }

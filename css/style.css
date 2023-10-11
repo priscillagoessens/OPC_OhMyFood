@@ -102,14 +102,18 @@ h2, h3 {
   width: 40px;
 }
 .container-menu__section__menu__card {
-  display: flex;
-  flex-direction: column;
   padding: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
+  overflow: hidden;
+  display: flex;
 }
-.container-menu__section__menu__card:hover {
-  background-color: #99e2d0;
+.container-menu__section__menu__card:hover .check {
+  margin-right: -1rem;
+}
+.container-menu__section__menu__card--plate {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .container-menu__section__menu__card--plate-title {
   overflow: hidden;
@@ -120,18 +124,30 @@ h2, h3 {
   font-style: normal;
   font-weight: bold;
   line-height: normal;
+  white-space: nowrap;
 }
 .container-menu__section__menu__card--plate-description {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 15.043px;
-  display: flex;
-  flex-direction: row;
+  white-space: nowrap;
 }
 .container-menu__section__menu__card--plate-price {
   margin-left: auto;
   color: #353535;
   font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.container-menu__section__menu__card .check {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
 }
 .container-menu__section .btn {
   align-self: center;
