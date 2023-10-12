@@ -1,60 +1,8 @@
 @import "./breakpoint";
 @import "./menu";
 @import "./variables";
+@import "./loader";
 
-*{
-    font-family: 'Roboto'; 
-}
-html,body{
-    overflow-x: hidden;
-    margin: 0 auto;
-}
-
-h1,h2,h3{
-    font-weight: 700;
-    font-size: 24px;
-}
-
-p{
-    margin: 0;
-    font-size: 18px;
-    font-weight: 300;
-}
-a{
-    text-decoration: none;
-    color: $black-color;
-}
-.btn{   
-    @include center-element;
-    border-radius: 25px;
-    width: 218px;
-    height: 50px;
-    color: $bg-white-color;
-    border: none;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    transition: transform 400ms;
-    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
-    background: $button-gradian;
-    &:hover{
-        background: linear-gradient(rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%),$button-gradian;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-    }
-}
-.like{
-    width: 22px;
-    height: 21px;
-    position: absolute;
-    right: 25px;
-    background-image: url(../assets/svg/like-default.svg);
-    transition:1s ease-in-out;
-    -webkit-transition: 1s ease-in-out;
-    &:hover{
-        background-image: url(../assets/svg/like-full.svg);
-    }   
-}
 
 //header
 .main-header{

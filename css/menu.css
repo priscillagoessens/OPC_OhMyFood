@@ -1,19 +1,241 @@
-/* Error: Undefined mixin.
- *    ,
- * 27 | /     @include media (desktop) {
- * 28 | |         width: 1055px;
- * 29 | |         margin: -3rem auto;
- * 30 | \     }
- *    '
- *   scss\menu.scss 27:5  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 27 \2502  \250c      @include media (desktop) {\a 28 \2502  \2502          width: 1055px;\a 29 \2502  \2502          margin: -3rem auto;\a 30 \2502  \2514      }\a    \2575 \a   scss\\menu.scss 27:5  root stylesheet";
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../assets/fonts/Shrikhand-Regular.ttf");
+}
+* {
+  font-family: "Roboto";
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: transform 400ms;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(#ff79da, #9356DC);
+}
+.btn:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(#ff79da, #9356DC);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.like {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  right: 25px;
+  background-image: url(../assets/svg/like-default.svg);
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+}
+.like:hover {
+  background-image: url(../assets/svg/like-full.svg);
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+.main-header__arrow {
+  margin-left: 1rem;
+}
+
+.section-info__container-img {
+  display: flex;
+  flex-direction: column;
+}
+.section-info__container-img__background {
+  object-fit: cover;
+  height: 17.1875rem;
+}
+
+.container-menu {
+  background-color: #F6F6F6;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  position: relative;
+  width: 100%;
+  margin-top: -3rem;
+}
+@media (min-width: 1025px) {
+  .container-menu {
+    width: 1055px;
+    margin: -3rem auto;
+  }
+}
+.container-menu__section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-menu__section {
+    align-items: center;
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: 1025px) {
+  .container-menu__section {
+    align-items: center;
+    padding-bottom: 100px;
+  }
+}
+.container-menu__section__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px 17px 0 17px;
+  width: 341px;
+  position: relative;
+}
+.container-menu__section__title h2 {
+  margin: 0;
+  font-family: "Shrikhand";
+}
+.container-menu__section__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 13px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-menu__section__menu {
+    width: 63%;
+  }
+}
+@media (min-width: 1025px) {
+  .container-menu__section__menu {
+    width: 63%;
+  }
+}
+.container-menu__section__menu--title {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  height: 27px;
+}
+.container-menu__section__menu--title::after {
+  border-top: 3px solid #99E2D0;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 40px;
+}
+.container-menu__section__menu__card {
+  padding: 15px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  animation: appear 2s;
+}
+.container-menu__section__menu__card:nth-child(2) {
+  animation-delay: 200ms;
+}
+.container-menu__section__menu__card:nth-child(3) {
+  animation-delay: 300ms;
+}
+.container-menu__section__menu__card:nth-child(4) {
+  animation-delay: 400ms;
+}
+.container-menu__section__menu__card:hover .check {
+  margin-right: -1rem;
+}
+.container-menu__section__menu__card--plate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container-menu__section__menu__card--plate-title {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  white-space: nowrap;
+}
+.container-menu__section__menu__card--plate-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15.043px;
+  white-space: nowrap;
+}
+.container-menu__section__menu__card--plate-price {
+  margin-left: auto;
+  color: #353535;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.container-menu__section__menu__card .check {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.container-menu__section__menu__card .check .fa-circle-check {
+  color: #FFFFFF;
+}
+.container-menu__section .btn {
+  align-self: center;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
