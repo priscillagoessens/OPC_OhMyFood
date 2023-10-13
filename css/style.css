@@ -67,6 +67,11 @@ a {
   background-image: url(../assets/svg/like-full.svg);
 }
 
+.content {
+  margin: auto;
+  width: 72%;
+}
+
 h2, h3 {
   margin: 0;
 }
@@ -120,12 +125,18 @@ h2, h3 {
   flex-direction: row;
   align-items: center;
   padding: 32px 17px 0 17px;
-  width: 341px;
-  position: relative;
-}
-.container-menu__section__title h2 {
+  column-gap: 24px;
+  justify-content: center;
   margin: 0;
   font-family: "Shrikhand";
+}
+.container-menu__section__title--font {
+  margin: 0;
+  font-family: "Shrikhand";
+}
+.container-menu__section__title .like {
+  position: unset;
+  right: none;
 }
 .container-menu__section__menu {
   display: flex;
@@ -306,6 +317,11 @@ a {
   background-image: url(../assets/svg/like-full.svg);
 }
 
+.content {
+  margin: auto;
+  width: 72%;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Regular.ttf");
@@ -375,6 +391,11 @@ a {
   background-image: url(../assets/svg/like-full.svg);
 }
 
+.content {
+  margin: auto;
+  width: 72%;
+}
+
 .loader {
   position: fixed;
   height: 100vh;
@@ -395,6 +416,7 @@ a {
   color: #484848;
   letter-spacing: 15px;
   animation: flash 2s linear infinite;
+  font-size: 20px;
 }
 .loader .letter:nth-child(1) {
   animation-delay: 0.1s;
@@ -494,7 +516,7 @@ a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-section .main-container .section-fonctionnement {
-    padding: 50px 180px 50px 180px;
+    padding: 50px;
   }
 }
 .main-section .main-container .section-fonctionnement__title {
@@ -514,6 +536,7 @@ a {
     flex-direction: row;
     gap: 36.51px;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -522,6 +545,7 @@ a {
     flex-direction: row;
     gap: 36.51px;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .main-section .main-container .section-fonctionnement__items__button {
@@ -537,17 +561,20 @@ a {
   gap: 27px;
   position: relative;
   width: 100%;
-  max-width: 322px;
-}
-@media (min-width: 1025px) {
-  .main-section .main-container .section-fonctionnement__items__button {
-    width: 100%;
-  }
+  min-width: 260px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-section .main-container .section-fonctionnement__items__button {
     width: 100%;
   }
+}
+@media (min-width: 1025px) {
+  .main-section .main-container .section-fonctionnement__items__button {
+    max-width: 322px;
+  }
+}
+.main-section .main-container .section-fonctionnement__items__button:hover {
+  background: rgba(183, 104, 202, 0.2392156863);
 }
 .main-section .main-container .section-fonctionnement__items__button::before {
   display: flex;
@@ -586,11 +613,25 @@ a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-section .main-container .section-restaurant {
-    padding: 50px 180px 50px 180px;
+    padding: 50px;
   }
 }
+.main-section .main-container .section-restaurant-content {
+  margin: auto;
+  width: 72%;
+}
 .main-section .main-container .section-restaurant__title {
-  margin: 54px 80px 0px 20px;
+  margin: 54px 80px 28px 20px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-section .main-container .section-restaurant__title {
+    margin: 54px 80px 28px 0px;
+  }
+}
+@media (min-width: 1025px) {
+  .main-section .main-container .section-restaurant__title {
+    margin: 54px 80px 28px 0px;
+  }
 }
 .main-section .main-container .section-restaurant__menu {
   gap: 18px;

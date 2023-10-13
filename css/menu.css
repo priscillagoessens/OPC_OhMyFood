@@ -67,6 +67,11 @@ a {
   background-image: url(../assets/svg/like-full.svg);
 }
 
+.content {
+  margin: auto;
+  width: 72%;
+}
+
 h2, h3 {
   margin: 0;
 }
@@ -120,12 +125,18 @@ h2, h3 {
   flex-direction: row;
   align-items: center;
   padding: 32px 17px 0 17px;
-  width: 341px;
-  position: relative;
-}
-.container-menu__section__title h2 {
+  column-gap: 24px;
+  justify-content: center;
   margin: 0;
   font-family: "Shrikhand";
+}
+.container-menu__section__title--font {
+  margin: 0;
+  font-family: "Shrikhand";
+}
+.container-menu__section__title .like {
+  position: unset;
+  right: none;
 }
 .container-menu__section__menu {
   display: flex;

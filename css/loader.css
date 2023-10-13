@@ -67,6 +67,11 @@ a {
   background-image: url(../assets/svg/like-full.svg);
 }
 
+.content {
+  margin: auto;
+  width: 72%;
+}
+
 .loader {
   position: fixed;
   height: 100vh;
@@ -87,6 +92,7 @@ a {
   color: #484848;
   letter-spacing: 15px;
   animation: flash 2s linear infinite;
+  font-size: 20px;
 }
 .loader .letter:nth-child(1) {
   animation-delay: 0.1s;

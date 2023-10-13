@@ -41,11 +41,18 @@ h2, h3{
             @include row-direction;
             align-items: center;
             padding: 32px 17px 0 17px;
-            width: 341px;
-            position: relative;
-            h2{
+            column-gap: 24px;
+            justify-content: center;
+            margin:0;
+            font-family: 'Shrikhand';
+            &--font{
                 margin:0;
                 font-family: 'Shrikhand';
+            }
+            .like{
+                position:unset;
+                right: none;
+
             }
         }
         &__menu{
