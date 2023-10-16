@@ -89,7 +89,7 @@ a {
   transform-origin: top;
 }
 .loader .letter {
-  color: #484848;
+  color: #ff79da;
   letter-spacing: 15px;
   animation: flash 2s linear infinite;
   font-size: 20px;

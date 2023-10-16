@@ -127,11 +127,8 @@ h2, h3 {
   padding: 32px 17px 0 17px;
   column-gap: 24px;
   justify-content: center;
-  margin: 0;
-  font-family: "Shrikhand";
 }
 .container-menu__section__title--font {
-  margin: 0;
   font-family: "Shrikhand";
 }
 .container-menu__section__title .like {
@@ -155,7 +152,6 @@ h2, h3 {
   }
 }
 .container-menu__section__menu--title {
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -201,12 +197,7 @@ h2, h3 {
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
-  font-family: Roboto;
   font-size: 18px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  white-space: nowrap;
 }
 .container-menu__section__menu__card--plate-description {
   overflow: hidden;
@@ -219,7 +210,6 @@ h2, h3 {
   color: #353535;
   font-weight: 700;
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
 }
 .container-menu__section__menu__card .check {
@@ -413,7 +403,7 @@ a {
   transform-origin: top;
 }
 .loader .letter {
-  color: #484848;
+  color: #ff79da;
   letter-spacing: 15px;
   animation: flash 2s linear infinite;
   font-size: 20px;
@@ -480,7 +470,6 @@ a {
 .main-header__img-container__img {
   width: 197px;
   height: 36px;
-  padding: 0px 19px 0px 16px;
 }
 
 .main-section .section-location {
@@ -672,7 +661,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   color: #008766;
   background-color: #99E2D0;
   position: absolute;

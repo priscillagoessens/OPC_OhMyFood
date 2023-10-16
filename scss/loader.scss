@@ -1,4 +1,5 @@
 @import "./variables";
+
 .loader{
   position: fixed;
   height: 100vh;
@@ -15,7 +16,7 @@
   animation-delay: 3s;
   transform-origin: top;
   .letter{
-    color:#484848;
+    color:$secondary-color;
     letter-spacing: 15px;
     animation: flash 2s linear infinite;
     font-size: 20px;

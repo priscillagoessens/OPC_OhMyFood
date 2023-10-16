@@ -43,10 +43,7 @@ h2, h3{
             padding: 32px 17px 0 17px;
             column-gap: 24px;
             justify-content: center;
-            margin:0;
-            font-family: 'Shrikhand';
             &--font{
-                margin:0;
                 font-family: 'Shrikhand';
             }
             .like{
@@ -63,7 +60,6 @@ h2, h3{
                 width: 63%;
             }
             &--title{
-                font-family: Roboto;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 300;
@@ -103,14 +99,9 @@ h2, h3{
                     text-overflow: ellipsis;
                     &-title{
                         overflow: hidden;
-                        color: #000;
+                        color: $black-color;
                         text-overflow: ellipsis;
-                        font-family: Roboto;
                         font-size: 18px;
-                        font-style: normal;
-                        font-weight: bold;
-                        line-height: normal;
-                        white-space: nowrap;
                     }
                     &-description{
                         overflow: hidden;
@@ -124,7 +115,6 @@ h2, h3{
                     color: $footer-bg-color;
                     font-weight: 700;
                     display: flex;
-                    justify-content: flex-end;
                     align-items: flex-end;
                 }
                 .check{
