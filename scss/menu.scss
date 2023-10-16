@@ -96,12 +96,12 @@ h2, h3{
                 } 
                 &--plate{
                     overflow: hidden;
-                    text-overflow: ellipsis;
                     &-title{
                         overflow: hidden;
                         color: $black-color;
                         text-overflow: ellipsis;
                         font-size: 18px;
+                        white-space: nowrap;
                     }
                     &-description{
                         overflow: hidden;

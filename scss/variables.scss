@@ -37,7 +37,6 @@ $button-gradian: linear-gradient($secondary-color,$primary-color);
     align-items: center;
 }
 
-
 *{
     font-family: 'Roboto'; 
 }
@@ -91,9 +90,4 @@ a{
     &:hover{
         background-image: url(../assets/svg/like-full.svg);
     }   
-}
-
-.content{
-    margin: auto;
-    width: 72%;
 }
