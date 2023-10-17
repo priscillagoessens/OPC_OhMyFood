@@ -1,0 +1,43 @@
+.footer{
+    padding: 22px 25px;
+    background-color: $footer-bg-color;
+    @include media(desktop,tablet){
+        padding: 30px 25px;
+        position: relative;
+    }
+    .section-footer{
+        @include column-direction;
+        gap: 16px;
+        @include media(desktop, tablet){
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 54px;
+        }
+        &__logo{
+            width: 139px;
+            height: 27px;
+            background-image: url(../assets/images/logo/ohmyfood-white.svg)
+        }
+        &__list{
+            @include column-direction;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 7px;
+            @include media(desktop, tablet){
+                flex-direction: row;
+                }
+            &-items{
+                @include row-direction;
+                gap: 11px;
+                @include media(desktop, tablet){
+                    display: inline;
+                    margin: 0 5px;
+                }
+                a{
+                    color:$bg-white-color;
+                }
+            }
+        }
+    }
+}

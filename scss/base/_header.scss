@@ -1,0 +1,19 @@
+.main-header{
+    align-items: center;
+    display: flex;
+    @include button-shadow;
+    &__img-container{
+        @include center-element;
+        margin: auto;
+        height: 63px;
+        &__img{
+            width: 197px;
+            height: 36px;
+        }
+   }
+}
+.main-header{
+    &__arrow{
+        margin-left: 1rem;;
+    }
+}

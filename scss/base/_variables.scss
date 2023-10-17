@@ -44,12 +44,13 @@ html,body{
     margin: 0 auto;
     height: 100%;
 }
-
 h1,h2,h3{
     font-weight: 700;
     font-size: 24px;
 }
-
+h2, h3{
+    margin: 0;
+}
 p{
     margin: 0;
     font-size: 18px;
@@ -86,6 +87,8 @@ a{
     background-image: url(../assets/svg/like-default.svg);
     transition:1s ease-in-out;
     -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    background-repeat: no-repeat;
     &:hover{
         background-image: url(../assets/svg/like-full.svg);
     }   
