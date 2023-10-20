@@ -5,6 +5,15 @@
         color: $footer-bg-color;
         height: 50px;
         gap: 17px;
+        &__input{
+            border: none;
+            text-align: center;
+            background-color: transparent;
+            width: 109px;
+            &:focus{
+                outline:none;
+            }
+        }
     }
     .section-info{
         background: $bg-grey-color;

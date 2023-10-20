@@ -103,6 +103,15 @@ a {
   height: 50px;
   gap: 17px;
 }
+.main-section .section-location__input {
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  width: 109px;
+}
+.main-section .section-location__input:focus {
+  outline: none;
+}
 .main-section .section-info {
   background: #F6F6F6;
   align-items: center;
