@@ -1,10 +1,10 @@
-![ohmyfood](/assets/img/logo/ohmyfood.png)
+![ohmyfood](/assets/images/logo/ohmyfood-white.svg)
 
 # ohmyfood 📱🍴
 
 ## Description :
 
-Ceci est un projet réalisé dans le cadre du programme de formation Développeur Web chez [OpenClassrooms](https://openclassrooms.com/fr/paths/717-developpeur-web)
+Ceci est un projet réalisé dans le cadre du programme de formation Développeur Web chez OpenClassrooms
 
 > Implémentez la version mobile d'un site de foodtech avec des animations CSS.
 >
@@ -72,14 +72,26 @@ Mon rôle a été de réaliser le site en intégrant les maquettes mobiles en HT
 
 ## Maquettes :
 
-Accueil :
+Accueil Mobile:
 
 <p align="center">
-  <img src="/assets/img/mockup/accueil.png" alt="Maquette Accueil">
+  <img src="/assets/images/maquettes/HomeMobile.png" alt="Maquette Accueil">
 </p>
 
-Page menu :
+Page menu Mobile:
 
 <p align="center">
-  <img src="/assets/img/mockup/menu.png" alt="Maquette Menu">
+  <img src="/assets/images/maquettes/MenuMobile.png" alt="Maquette Menu">
+</p>
+
+Accueil Desktop:
+
+<p align="center">
+  <img src="/assets/images/maquettes/HomeDesktop.png" alt="Maquette Accueil">
+</p>
+
+Page menu Desktop:
+
+<p align="center">
+  <img src="/assets/images/maquettes/MenuDesktop.png" alt="Maquette Menu">
 </p>
